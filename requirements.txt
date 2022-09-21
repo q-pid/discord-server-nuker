@@ -1,1 +1,4 @@
-n
+discord
+colorama
+discord.py
+
