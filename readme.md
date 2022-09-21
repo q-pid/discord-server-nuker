@@ -7,7 +7,7 @@ Like with all my scripts, I coded this for my own education! I only recommend yo
 
 Insure yourself here: https://www.discord.com/terms
 
-#### Features:
+### Features:
 - nuke
 - delete roles
 - mass dm members
