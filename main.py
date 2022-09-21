@@ -23,7 +23,6 @@ bot.remove_command('help')
 async def on_ready():
     print(Fore.MAGENTA + """
 Bot is Online!
-
 Commands:
 1. !delroles (deletes all roles)
 2. !kill server (nukes server)
@@ -64,7 +63,7 @@ async def kill(ctx, arg: str):
     allowed_mentions = discord.AllowedMentions(everyone = True)
     guild = ctx.message.guild
     while True:
-        channel = await guild.create_text_channel(arg)
+        channel = await guild.create_text_channel(CHANNEL_SPAM)
         await channel.send(content = SPAM_MESSAGE, allowed_mentions = allowed_mentions)
 
 @bot.command()
