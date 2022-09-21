@@ -22,7 +22,8 @@ bot.remove_command('help')
 @bot.event
 async def on_ready():
     print(Fore.MAGENTA + """
-Bot is Online!
+Bot is Online │ !help
+
 Commands:
 1. !delroles (deletes all roles)
 2. !kill server (nukes server)
