@@ -2,11 +2,6 @@
 
 `Fastest and cleanest nuke bot.!`
 
-### Personal-Statement:
-Like with all my scripts, I coded this for my own education! I only recommend you to use my bot in your own server, because everything else is against discord’s terms of service. It will ban you.
-
-Insure yourself here: https://www.discord.com/terms
-
 ### Features:
 - nuke
 - delete roles
@@ -26,6 +21,11 @@ Insure yourself here: https://www.discord.com/terms
 - run `main.py`
 
 YouTube Instructions coming soon!
+
+### Personal-Statement:
+Like with all my scripts, I coded this for my own education! I only recommend you to use my bot in your own server, because everything else is against discord’s terms of service. It will ban you.
+
+Insure yourself here: https://www.discord.com/terms
 
 ---
 ---
