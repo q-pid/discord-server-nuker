@@ -3,7 +3,7 @@
 `Fastest and cleanest nuke bot.!`
 
 ### Personal-Statement:
-Like with all my scripts, I coded this for my own education! Although I only recommend you to use my bot in your own server, because everything else is against discord’s terms of service. It will ban you.
+Like with all my scripts, I coded this for my own education! I only recommend you to use my bot in your own server, because everything else is against discord’s terms of service. It will ban you.
 
 Insure yourself here: https://www.discord.com/terms
 
@@ -24,4 +24,4 @@ YouTube Instructions coming soon!
 ---
 ---
 ---
-
+hidden message: pls nuke skids and scammers
