@@ -7,6 +7,12 @@ Like with all my scripts, I coded this for my own education! I only recommend yo
 
 Insure yourself here: https://www.discord.com/terms
 
+#### Features:
+- nuke
+- delete roles
+- mass dm members
+- clear all channels
+
 ### Requirements:
 - brain
 - some python modules
