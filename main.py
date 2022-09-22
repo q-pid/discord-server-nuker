@@ -1,8 +1,7 @@
-import discord 
+import discord, os
 from discord.ext import commands
 from discord.utils import get
 from colorama import Fore
-import os
 
 r = Fore.MAGENTA
 
