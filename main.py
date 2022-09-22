@@ -15,19 +15,19 @@ SPAM_MESSAGE = input("Input your Spam Message: ")
 CHANNEL_SPAM = input("Input Spam Create Channel Name: ")
 DM_ALL = input("Input Dm Message for all Members: ")
 
-bot = commands.Bot(command_prefix="!" ,help_command=None, intents=discord.Intents.all())
+bot = commands.Bot(command_prefix="." ,help_command=None, intents=discord.Intents.all())
 bot.remove_command('help')
 
 @bot.event
 async def on_ready():
     print(Fore.MAGENTA + """
-Bot is Online │ !help
+Bot is Online │ .help
 
 Commands:
-1. !delroles (deletes all roles)
-2. !kill server (nukes server)
-3. !dmall (dm all server members)
-4. !clear (deletes all channels)
+1. .delroles (deletes all roles)
+2. .kill server (nukes server)
+3. .dmall (dm all server members)
+4. .clear (deletes all channels)
 """)
 
 @bot.command()
