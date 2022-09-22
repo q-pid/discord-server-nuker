@@ -1,6 +1,6 @@
 <h1 align="center">Discord Server Nuker.</h1>
 
-`Fastest and cleanest nuke bot.!`
+`Fastest and cleanest nuke bot!`
 
 ### Features:
 - nuke
