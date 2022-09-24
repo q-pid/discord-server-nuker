@@ -20,7 +20,7 @@
 - make sure you are in the folders path
 - run `main.py`
 
-YouTube Instructions coming soon!
+YouTube Instructions on their way!
 
 ### Personal-Statement:
 Like with all my scripts, I coded this for my own education! I only recommend you to use my bot in your own server, because everything else is against discord’s terms of service. It will ban you.
