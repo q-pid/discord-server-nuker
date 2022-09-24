@@ -8,8 +8,6 @@
 - mass dm members
 - clear all channels
 
-prefix is a .
-
 ### Requirements:
 - brain
 - some python modules
