@@ -30,4 +30,4 @@ Insure yourself here: https://www.discord.com/terms
 ---
 ---
 ---
-hidden info: pls nuke skids and scammers
+pls nuke skids and scammers
